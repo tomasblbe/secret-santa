@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:P</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="page">
+        <img src="{{ url_for('static', filename='img/snow.gif') }}" alt="Christmas GIF"  id="snow-gif">
+        
+        <h1 class="quote">Vianočný čas je christmas time</h1>
+        <h3 class="quote">-MC Erik</h2>
+        
+        
+        <p class="joke">{{ joke }}</p>
+        
+        <form id="jokeForm" method="post" action="/joke">
+            <button type="submit" id="joke-button">Get a Random Joke</button>
+        </form>
+        
+        
+        <h3 class="joke-of-day">Joke of the Day:</h3>
+        <p class="joke-of-day-text">{{ joke_of_day }}</p>
+
+    </div>
+</body>
+</html>
